@@ -7,7 +7,7 @@ function Sidebar() {
     const [report, setReport] = useState([])
 
     useEffect(() => {
-        fetch('https://spaceflightnewsapi.net/api/v3/blogs')
+        fetch('https://api.spaceflightnewsapi.net/v3/blogs')
         .then(response => response.json())
         .then((data) => {
             setPost(data)
