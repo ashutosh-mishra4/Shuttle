@@ -5,7 +5,7 @@ function News() {
     const [news, setNews] = useState([])
 
     useEffect(() => {
-        fetch('https://spaceflightnewsapi.net/api/v2/articles')
+        fetch('https://spaceflightnewsapi.net/api/v3/articles')
         .then(response => response.json())
         .then((data) => {
           setNews(data)
