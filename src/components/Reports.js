@@ -14,7 +14,7 @@ function News() {
 
     return (
         <div className="flex flex-col md:flex-row md:gap-8 md:flex-wrap">
-            <h2 className="font-bold font-roboto text-2xl text-left pl-4 pt-6 underline w-full md:text-center">Latest News</h2>
+            <h2 className="font-bold font-roboto text-2xl text-left pl-4 pt-6 underline w-full md:text-center">Latest Reports</h2>
             {reports.map((val) => {
                 return (
                         <div className="mt-10 w-11/12 p-4 border-black rounded-lg border-2 m-auto md:w-72 shadow-xl" key={val.id}>
