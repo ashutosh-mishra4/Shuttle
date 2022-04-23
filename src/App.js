@@ -1,13 +1,13 @@
 import React, { Suspense } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
+import Header from "./components/Header";
 
 const Hero = React.lazy(() => import("./components/Hero.js"));
 const News = React.lazy(() => import("./components/News.js"));
 const Footer = React.lazy(() => import("./components/Footer.js"));
 const Blogpost = React.lazy(() => import("./components/Blogpost.js"));
 const Reports = React.lazy(() => import("./components/Reports.js"));
-// const Sidebar = React.lazy(() => import('./components/Sidebar.js'))
 
 function App() {
   return (
@@ -19,16 +19,16 @@ function App() {
           </div>
         }
       >
+        <Header />
         <Hero />
-        <BrowserRouter>
-          <Routes>
-            <Route>
-              <Route path="news" element={<News />} />
-              <Route path="blog" element={<Blogpost />} />
-              <Route path="reports" element={<Reports />} />
-            </Route>
-          </Routes>
-        </BrowserRouter>
+        <Routes>
+          <Route>
+            <Route index element={<News />} />
+            <Route path="news" element={<News />} />
+            <Route path="blog" element={<Blogpost />} />
+            <Route path="reports" element={<Reports />} />
+          </Route>
+        </Routes>
         <Footer />
       </Suspense>
     </div>
