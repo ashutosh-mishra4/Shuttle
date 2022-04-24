@@ -39,16 +39,16 @@ function Header() {
         <nav className="flex justify-between md:gap-72 lg:gap-96">
           <p>Shuttle</p>
           <ul className="hidden md:flex md:gap-10 lg:gap-20 xl:gap-28">
-            <li>
+            <li className="hover:underline">
               <Link to="/">Home</Link>
             </li>
-            <li>
+            <li className="hover:underline">
               <Link to="/blog">Blog</Link>
             </li>
-            <li>
+            <li className="hover:underline">
               <Link to="/news">News</Link>
             </li>
-            <li>
+            <li className="hover:underline">
               <Link to="/reports">Reports</Link>
             </li>
           </ul>
